@@ -33,7 +33,7 @@ class WorksVenn:
             len(self.librarything.intersection(self.openlibrary)),
             len(self.oclc.intersection(self.librarything).intersection(self.openlibrary))
         ]
-        return "https://chart.googleapis.com/chart?chs=300x300&cht=v&chd=t:%s&chco=77FF77,7777FF,FF7777&chdl=ThingISBN|xISBN|OpenLibrary" % ",".join([str(d) for d in chd])
+        return "https://chart.googleapis.com/chart?chs=300x300&cht=v&chd=t:%s&chco=77FF77,7777FF,FF7777&chdl=xISBN|ThingISBN|OpenLibrary" % ",".join([str(d) for d in chd])
 
 def thingisbn(isbn):
     url = "http://www.librarything.com/api/thingISBN/%s" % isbn
