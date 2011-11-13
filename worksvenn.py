@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# usage: worksvenn.py [isbn] [isbn] [isbn]
+
 import sys
 import json
 import urllib
