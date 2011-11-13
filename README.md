@@ -2,12 +2,16 @@ A simplistic tool to analyze the coverage of the OpenLibrary, OCLC and
 LibraryThing FRBRization services. If you give worksvenn.py an ISBN it will
 talk to the three APIs to get all the related edition ISBNs, and then compare
 the results by printing out which ISBNs are unique to each service, and a 
-Google Chart URL for a Venn diagram visualization of the results.
+Google Chart URL for a Venn diagram visualization of the results. Here's what
+the chart looks like for William Gibson's Neuromancer (ISBN 0441569595)
 
-For example here are the results for a lookup of a particular edition of 
-William Gibson's Neuromancer:
+![Venn Diagram](https://chart.googleapis.com/chart?chs=300x300&cht=v&chd=t:86.7469879518,72.2891566265,19.2771084337,49,16,15,15&chco=77FF77,7777FF,FF7777&chdl=ThingISBN|xISBN|OpenLibrary "Neuromancer FRBR Venn Diagram")
 
-% ./worksvenn.py 0441569595
+To generate this image you just call worksvenn.py:
+
+    % ./worksvenn.py 0441569595
+
+And you will see the following output:
 
     Workset Results:
 
