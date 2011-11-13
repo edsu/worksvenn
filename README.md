@@ -1,6 +1,6 @@
 worksvenn.py is a tool to analyze the coverage of the [OpenLibrary](http://openlibrary.org/dev/docs/restful_api#content), [OCLC](http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp) and [LibraryThing](http://www.librarything.com/wiki/index.php/LibraryThing_APIs) FRBRization services. If you give worksvenn.py an ISBN it will talk to the three APIs to get all the related edition ISBNs, and then compare the results by printing out which ISBNs are unique to each service, and a Google Chart URL for a Venn diagram visualization of the results. Here's what the chart looks like for William Gibson's Neuromancer (ISBN 0441569595)
 
-![Venn Diagram](https://chart.googleapis.com/chart?chs=300x300&cht=v&chd=t:86.7469879518,72.2891566265,19.2771084337,49,16,15,15&chco=77FF77,7777FF,FF7777&chdl=ThingISBN|xISBN|OpenLibrary "Neuromancer FRBR Venn Diagram")
+![Venn Diagram](https://chart.googleapis.com/chart?chs=300x200&cht=v&chd=t:86.7469879518,72.2891566265,19.2771084337,49,16,15,15&chco=77FF77,7777FF,FF7777&chdl=xISBN|ThingISBN|OpenLibrary "Neuromancer FRBR Venn Diagram")
 
 To generate this image you just call worksvenn.py:
 
