@@ -55,7 +55,6 @@ def openlibrary(isbn):
         offset = 0
         while True:
             url = "http://openlibrary.org" + work_id + "/editions.json?limit=50&offset=" + str(offset)
-            print url
             j = json.loads(urllib.urlopen(url).read())
             for edition in j['entries']:
                 for isbn in edition.get('isbn_10', []):
@@ -77,15 +76,28 @@ def c(a):
 if __name__ == "__main__":
     isbns = sys.argv[1:]
     v = WorksVenn(*isbns)
+    print "Workset Results:"
+    print
     print "oclc: %s" % c(v.oclc)
+    print
     print "librarything: %s" % c(v.librarything)
+    print
     print "openlibrary: %s" % c(v.openlibrary)
+    print
+    print "Differences:"
+    print
     print "oclc \\ librarything: " + c(v.oclc - v.librarything)
+    print
     print "oclc \\ openlibrary: " + c(v.oclc - v.openlibrary)
+    print
     print "librarything \\ oclc: ", c(v.librarything - v.oclc)
+    print
     print "librarything \\ openlibrary: ", c(v.librarything - v.openlibrary)
+    print
     print "openlibrary \\ oclc: ", c(v.openlibrary - v.oclc)
+    print
     print "openlibrary \\ librarything: ", c(v.openlibrary - v.librarything)
+    print
     print "chart: ", v.chart_url()
 
 
