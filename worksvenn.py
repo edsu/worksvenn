@@ -24,7 +24,6 @@ class WorksVenn:
         self.openlibrary.update(openlibrary(isbn))
 
     def chart_url(self):
-        max_size = float(max(len(self.oclc), len(self.librarything), len(self.openlibrary)))
         max_size = float(len(self.oclc.union(self.librarything).union(self.openlibrary)))
         chd = [
             len(self.oclc) / max_size * 100,
